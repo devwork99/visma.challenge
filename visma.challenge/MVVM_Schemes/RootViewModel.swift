@@ -14,6 +14,7 @@ class RootViewModel : ObservableObject {
     
     @Published var items : [String] = []
     
+    //var coordinator : AppCon
     
 
     init() {
@@ -21,6 +22,8 @@ class RootViewModel : ObservableObject {
     }
     
     
-    
+    func showReceitDetails(){
+        
+    }
     
 }

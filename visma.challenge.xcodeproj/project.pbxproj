@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B082D8DA6B100A0C084 /* Coordinator.swift */; };
+		45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */; };
+		45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0C2D8DAD8500A0C084 /* AddExpense.swift */; };
 		452A4E012D8C4E34009BFEC9 /* visma_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */; };
 		452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E022D8C4E34009BFEC9 /* RootView.swift */; };
 		452A4E052D8C4E36009BFEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452A4E042D8C4E36009BFEC9 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45290B082D8DA6B100A0C084 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		45290B0C2D8DAD8500A0C084 /* AddExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpense.swift; sourceTree = "<group>"; };
 		452A4DFD2D8C4E34009BFEC9 /* visma.challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = visma.challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeApp.swift; sourceTree = "<group>"; };
 		452A4E022D8C4E34009BFEC9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -73,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45290B072D8DA65200A0C084 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				45290B082D8DA6B100A0C084 /* Coordinator.swift */,
+				45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		45290B0E2D8DAD8B00A0C084 /* DetailsToAddExpense */ = {
+			isa = PBXGroup;
+			children = (
+				45290B0C2D8DAD8500A0C084 /* AddExpense.swift */,
+			);
+			path = DetailsToAddExpense;
+			sourceTree = "<group>";
+		};
 		452A4DF42D8C4E34009BFEC9 = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +119,9 @@
 		452A4DFF2D8C4E34009BFEC9 /* visma.challenge */ = {
 			isa = PBXGroup;
 			children = (
+				45290B072D8DA65200A0C084 /* Coordinator */,
 				452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */,
-				452A4E2A2D8C4E54009BFEC9 /* MVVM */,
+				452A4E2A2D8C4E54009BFEC9 /* MVVM_Schemes */,
 				452A4E042D8C4E36009BFEC9 /* Assets.xcassets */,
 				452A4E062D8C4E36009BFEC9 /* Preview Content */,
 			);
@@ -129,13 +153,14 @@
 			path = visma.challengeUITests;
 			sourceTree = "<group>";
 		};
-		452A4E2A2D8C4E54009BFEC9 /* MVVM */ = {
+		452A4E2A2D8C4E54009BFEC9 /* MVVM_Schemes */ = {
 			isa = PBXGroup;
 			children = (
 				452A4E022D8C4E34009BFEC9 /* RootView.swift */,
 				452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */,
+				45290B0E2D8DAD8B00A0C084 /* DetailsToAddExpense */,
 			);
-			path = MVVM;
+			path = MVVM_Schemes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */,
+				45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */,
 				452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */,
+				45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */,
 				452A4E2C2D8C529F009BFEC9 /* RootViewModel.swift in Sources */,
 				452A4E012D8C4E34009BFEC9 /* visma_challengeApp.swift in Sources */,
 			);
@@ -444,9 +472,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codesquare.visma-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,9 +505,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codesquare.visma-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
