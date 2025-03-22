@@ -25,6 +25,7 @@
 		45F858BB2D8F0050006A4047 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F858BA2D8F0050006A4047 /* VisionKit.framework */; };
 		45F858BD2D8F0415006A4047 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F858BC2D8F0415006A4047 /* ScanViewModel.swift */; };
 		45F858BF2D8F0469006A4047 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F858BE2D8F0469006A4047 /* Vision.framework */; };
+		45F858C32D8F1A26006A4047 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 45F858C22D8F1A26006A4047 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		45F858BA2D8F0050006A4047 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
 		45F858BC2D8F0415006A4047 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		45F858BE2D8F0469006A4047 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		45F858C12D8F19A4006A4047 /* demo_screens.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_screens.PNG; sourceTree = "<group>"; };
+		45F858C22D8F1A26006A4047 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 		452A4DF42D8C4E34009BFEC9 = {
 			isa = PBXGroup;
 			children = (
+				45F858C22D8F1A26006A4047 /* README.md */,
 				452A4DFF2D8C4E34009BFEC9 /* visma.challenge */,
 				452A4E102D8C4E36009BFEC9 /* visma.challengeTests */,
 				452A4E1A2D8C4E36009BFEC9 /* visma.challengeUITests */,
@@ -148,6 +152,7 @@
 		452A4DFF2D8C4E34009BFEC9 /* visma.challenge */ = {
 			isa = PBXGroup;
 			children = (
+				45F858C02D8F1991006A4047 /* ScreenShots */,
 				452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */,
 				45290B0F2D8DB68900A0C084 /* Storage */,
 				45290B072D8DA65200A0C084 /* Coordinator */,
@@ -200,6 +205,14 @@
 				45F858BA2D8F0050006A4047 /* VisionKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45F858C02D8F1991006A4047 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				45F858C12D8F19A4006A4047 /* demo_screens.PNG */,
+			);
+			path = ScreenShots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F858C32D8F1A26006A4047 /* README.md in Resources */,
 				452A4E082D8C4E36009BFEC9 /* Preview Assets.xcassets in Resources */,
 				452A4E052D8C4E36009BFEC9 /* Assets.xcassets in Resources */,
 			);
