@@ -1,8 +1,19 @@
 #  VISMA CODE CHALLENGE (Muhammad Yasir)
 
-An iOS demo project that demonstrate the capability to scan a receipty and store in local store
+
+## Screen Shots
+
+### ![alt text](https://github.com/devwork99/visma.challenge/blob/dev/visma.challenge/ScreenShots/demo_screens.PNG)
+
+
+## Overview
+
+An iOS demo project that demonstrate the capability to scan a receipty and store in local storage
+
+## Features
+
     - Scan a grocerry store receipt i.e LiDL, Auchan, McDonalds
-    - With the use of VisionKit, extract the data in the receipt and save in Core Data
+    - With the use of 'VisionKit', extract the data in the receipt and save in Core Data
     - Listing to see the previous scans
     - Git current branch "dev" (others, main)
     - Using MVVM architecture for iOS mobile app, separatin of concerns
@@ -12,6 +23,4 @@ An iOS demo project that demonstrate the capability to scan a receipty and store
     
     
 
-## Screen Shots
 
-### ![alt text](https://github.com/devwork99/MVVM-TShirtStore/blob/dev/MVVM-fakestore/ScreenShots/TStore.png?raw=true)
