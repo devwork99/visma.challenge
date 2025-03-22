@@ -10,6 +10,10 @@
 		45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B082D8DA6B100A0C084 /* Coordinator.swift */; };
 		45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */; };
 		45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0C2D8DAD8500A0C084 /* AddExpense.swift */; };
+		45290B112D8DB6A200A0C084 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B102D8DB6A200A0C084 /* PhotoViewModel.swift */; };
+		45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45290B142D8DB79900A0C084 /* visma.xcdatamodeld */; };
+		45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */; };
+		45290B1A2D8DBB1800A0C084 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B192D8DBB1800A0C084 /* CameraView.swift */; };
 		452A4E012D8C4E34009BFEC9 /* visma_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */; };
 		452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E022D8C4E34009BFEC9 /* RootView.swift */; };
 		452A4E052D8C4E36009BFEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452A4E042D8C4E36009BFEC9 /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 		45290B082D8DA6B100A0C084 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		45290B0C2D8DAD8500A0C084 /* AddExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpense.swift; sourceTree = "<group>"; };
+		45290B102D8DB6A200A0C084 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		45290B152D8DB79900A0C084 /* visma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = visma.xcdatamodel; sourceTree = "<group>"; };
+		45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
+		45290B192D8DBB1800A0C084 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		452A4DFD2D8C4E34009BFEC9 /* visma.challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = visma.challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeApp.swift; sourceTree = "<group>"; };
 		452A4E022D8C4E34009BFEC9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -92,8 +100,19 @@
 			isa = PBXGroup;
 			children = (
 				45290B0C2D8DAD8500A0C084 /* AddExpense.swift */,
+				45290B192D8DBB1800A0C084 /* CameraView.swift */,
 			);
 			path = DetailsToAddExpense;
+			sourceTree = "<group>";
+		};
+		45290B0F2D8DB68900A0C084 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				45290B102D8DB6A200A0C084 /* PhotoViewModel.swift */,
+				45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */,
+				45290B142D8DB79900A0C084 /* visma.xcdatamodeld */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		452A4DF42D8C4E34009BFEC9 = {
@@ -119,8 +138,9 @@
 		452A4DFF2D8C4E34009BFEC9 /* visma.challenge */ = {
 			isa = PBXGroup;
 			children = (
-				45290B072D8DA65200A0C084 /* Coordinator */,
 				452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */,
+				45290B0F2D8DB68900A0C084 /* Storage */,
+				45290B072D8DA65200A0C084 /* Coordinator */,
 				452A4E2A2D8C4E54009BFEC9 /* MVVM_Schemes */,
 				452A4E042D8C4E36009BFEC9 /* Assets.xcassets */,
 				452A4E062D8C4E36009BFEC9 /* Preview Content */,
@@ -295,8 +315,12 @@
 			files = (
 				45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */,
 				45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */,
+				45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */,
+				45290B112D8DB6A200A0C084 /* PhotoViewModel.swift in Sources */,
 				452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */,
 				45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */,
+				45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */,
+				45290B1A2D8DBB1800A0C084 /* CameraView.swift in Sources */,
 				452A4E2C2D8C529F009BFEC9 /* RootViewModel.swift in Sources */,
 				452A4E012D8C4E34009BFEC9 /* visma_challengeApp.swift in Sources */,
 			);
@@ -460,6 +484,8 @@
 				DEVELOPMENT_TEAM = H5ELV35X56;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App needs to access camera to capture receit.";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "App needs directory access to save images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,6 +519,8 @@
 				DEVELOPMENT_TEAM = H5ELV35X56;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App needs to access camera to capture receit.";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "App needs directory access to save images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -627,6 +655,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		45290B142D8DB79900A0C084 /* visma.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45290B152D8DB79900A0C084 /* visma.xcdatamodel */,
+			);
+			currentVersion = 45290B152D8DB79900A0C084 /* visma.xcdatamodel */;
+			path = visma.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 452A4DF52D8C4E34009BFEC9 /* Project object */;
 }

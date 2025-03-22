@@ -11,6 +11,7 @@ struct RootView: View {
     
     @StateObject private var vm = RootViewModel()
     @StateObject var coordinator = AppCoordinator()
+    @StateObject private var photoViewModel = PhotoViewModel()
     
     var body: some View {
         
@@ -34,7 +35,7 @@ struct RootView: View {
                     
                     Image(systemName: "plus.app.fill")
                         .imageScale(.large)
-                        .foregroundColor(.cyan)
+                        .foregroundColor(.gray)
                         .frame(width:100, height:60)
                         .border(.gray)
                         .onTapGesture {
@@ -44,17 +45,13 @@ struct RootView: View {
                 }
                 
                 List {
-                    ForEach(vm.items, id:\.self){ item in
-                        
-                        HStack{
-                            Text(item)
-                                .foregroundColor(.gray)
-                                .font(Font(UIFont.systemFont(ofSize:10)))
-                                .frame(maxWidth:.infinity, alignment:.leading)
+                    ForEach(photoViewModel.photos, id: \.id) { photo in
+                        if let image = PhotoStorageManager.shared.loadImage(named: photo.fileName ?? "") {
                             
-                            Image(systemName:"plus.viewfinder")
-                                .frame(width: 40, height: 40)
-                                .frame(maxWidth:.infinity, alignment:.trailing)
+                            ReceiptCell(imageIn:image, imageName:photo.fileName ,imageDate:"21-03-2025", totalAmount:23.5, currency:"Euro")
+                            
+                        } else {
+                            Text("Image not found")
                         }
                     }
                 }
