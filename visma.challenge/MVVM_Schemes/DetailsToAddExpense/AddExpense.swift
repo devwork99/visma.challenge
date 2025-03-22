@@ -11,9 +11,9 @@ import SwiftUI
 
 struct AddExpense : View {
     
+    @StateObject private var viewModel = ScanViewModel()
     @ObservedObject var coordinator : AppCoordinator
-    
-    @StateObject private var photoViewModel = PhotoViewModel()
+    @StateObject private var photoViewModel = StorageHelper()
     @State private var showCamera = false
     @State private var selectedImage: UIImage?
     
@@ -23,10 +23,10 @@ struct AddExpense : View {
         VStack(spacing:20){
             
             List {
-                ForEach(photoViewModel.photos, id: \.id) { photo in
+                ForEach(photoViewModel.scans, id: \.id) { photo in
                     if let image = PhotoStorageManager.shared.loadImage(named: photo.fileName ?? "") {
                         
-                        ReceiptCell(imageIn:image, imageName:photo.fileName ,imageDate:"21-03-2025", totalAmount:23.5, currency:"Euro")
+                        ReceiptCell(imageIn:image, imageName:photo.fileName ,imageDate:photo.date?.description ?? "", totalAmount:23.5, currency:"Euro", textExt:photo.text_ext ?? "")
                         
                     } else {
                         Text("Image not found")
@@ -45,10 +45,7 @@ struct AddExpense : View {
                     .foregroundColor(.gray)
                     .cornerRadius(5)
                     .shadow(radius:5)
-                    
-                    
             }
-            
             
             Button {
                 coordinator.goBack()
@@ -58,23 +55,16 @@ struct AddExpense : View {
                     .frame(width:200 ,height:40)
                     .foregroundColor(.white)
                     .background(.gray)
-                    
                     .cornerRadius(5)
-                    
-                    
-                    //.padding()
             }
-            
-            
         }
         .sheet(isPresented: $showCamera) {
-            CameraView(image: $selectedImage) { image in
-                if let fileName = PhotoStorageManager.shared.saveImage(image) {
-                    photoViewModel.savePhoto(fileName: fileName)
-                }
+            CameraView { images in
+                viewModel.processScan(images)
             }
         }
-        .navigationTitle("Photo List")
+        
+        .navigationTitle("Scans List")
         
     }
     
@@ -89,23 +79,36 @@ struct ReceiptCell : View {
     var imageDate : String
     var totalAmount : Double
     var currency : String
+    var textExt : String
     
     var body : some View {
-        HStack{
+        HStack(spacing:10){
+            
             Image(uiImage: imageIn)
                 .resizable()
                 .scaledToFit()
-                .frame(height: 100)
+                .frame(width:100,height: 100)
             
-            Spacer()
-            
-            VStack(alignment:.leading){
+            VStack(alignment:.leading, spacing:4.0){
                 Text(imageName ?? "")
                     .lineLimit(2)
+                    .font(Font(UIFont.systemFont(ofSize:10)))
                 Text(imageDate)
+                    .font(Font(UIFont.systemFont(ofSize:8)))
                 Text("\(totalAmount)")
+                    .font(Font(UIFont.systemFont(ofSize:6)))
                 Text(currency)
+                    .font(Font(UIFont.systemFont(ofSize:4)))
             }
+            .frame(maxWidth:100.0)
+            
+            
+            ScrollView{
+                Text(textExt)
+                    .font(Font(UIFont.boldSystemFont(ofSize:10)))
+                    .foregroundColor(.white)
+                    .background(.gray)
+            }.frame(height:150)
         }
     }
 }

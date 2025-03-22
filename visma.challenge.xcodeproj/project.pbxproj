@@ -10,7 +10,7 @@
 		45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B082D8DA6B100A0C084 /* Coordinator.swift */; };
 		45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */; };
 		45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0C2D8DAD8500A0C084 /* AddExpense.swift */; };
-		45290B112D8DB6A200A0C084 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B102D8DB6A200A0C084 /* PhotoViewModel.swift */; };
+		45290B112D8DB6A200A0C084 /* StorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B102D8DB6A200A0C084 /* StorageHelper.swift */; };
 		45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45290B142D8DB79900A0C084 /* visma.xcdatamodeld */; };
 		45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */; };
 		45290B1A2D8DBB1800A0C084 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B192D8DBB1800A0C084 /* CameraView.swift */; };
@@ -22,6 +22,9 @@
 		452A4E1C2D8C4E36009BFEC9 /* visma_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E1B2D8C4E36009BFEC9 /* visma_challengeUITests.swift */; };
 		452A4E1E2D8C4E36009BFEC9 /* visma_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E1D2D8C4E36009BFEC9 /* visma_challengeUITestsLaunchTests.swift */; };
 		452A4E2C2D8C529F009BFEC9 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */; };
+		45F858BB2D8F0050006A4047 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F858BA2D8F0050006A4047 /* VisionKit.framework */; };
+		45F858BD2D8F0415006A4047 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F858BC2D8F0415006A4047 /* ScanViewModel.swift */; };
+		45F858BF2D8F0469006A4047 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F858BE2D8F0469006A4047 /* Vision.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,7 @@
 		45290B082D8DA6B100A0C084 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		45290B0C2D8DAD8500A0C084 /* AddExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpense.swift; sourceTree = "<group>"; };
-		45290B102D8DB6A200A0C084 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		45290B102D8DB6A200A0C084 /* StorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHelper.swift; sourceTree = "<group>"; };
 		45290B152D8DB79900A0C084 /* visma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = visma.xcdatamodel; sourceTree = "<group>"; };
 		45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
 		45290B192D8DBB1800A0C084 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -60,6 +63,9 @@
 		452A4E1B2D8C4E36009BFEC9 /* visma_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeUITests.swift; sourceTree = "<group>"; };
 		452A4E1D2D8C4E36009BFEC9 /* visma_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		45F858BA2D8F0050006A4047 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
+		45F858BC2D8F0415006A4047 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
+		45F858BE2D8F0469006A4047 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F858BF2D8F0469006A4047 /* Vision.framework in Frameworks */,
+				45F858BB2D8F0050006A4047 /* VisionKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				45290B0C2D8DAD8500A0C084 /* AddExpense.swift */,
+				45F858BC2D8F0415006A4047 /* ScanViewModel.swift */,
 				45290B192D8DBB1800A0C084 /* CameraView.swift */,
 			);
 			path = DetailsToAddExpense;
@@ -108,7 +117,7 @@
 		45290B0F2D8DB68900A0C084 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				45290B102D8DB6A200A0C084 /* PhotoViewModel.swift */,
+				45290B102D8DB6A200A0C084 /* StorageHelper.swift */,
 				45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */,
 				45290B142D8DB79900A0C084 /* visma.xcdatamodeld */,
 			);
@@ -121,6 +130,7 @@
 				452A4DFF2D8C4E34009BFEC9 /* visma.challenge */,
 				452A4E102D8C4E36009BFEC9 /* visma.challengeTests */,
 				452A4E1A2D8C4E36009BFEC9 /* visma.challengeUITests */,
+				45F858B92D8F004F006A4047 /* Frameworks */,
 				452A4DFE2D8C4E34009BFEC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -181,6 +191,15 @@
 				45290B0E2D8DAD8B00A0C084 /* DetailsToAddExpense */,
 			);
 			path = MVVM_Schemes;
+			sourceTree = "<group>";
+		};
+		45F858B92D8F004F006A4047 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45F858BE2D8F0469006A4047 /* Vision.framework */,
+				45F858BA2D8F0050006A4047 /* VisionKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,7 +335,8 @@
 				45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */,
 				45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */,
 				45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */,
-				45290B112D8DB6A200A0C084 /* PhotoViewModel.swift in Sources */,
+				45F858BD2D8F0415006A4047 /* ScanViewModel.swift in Sources */,
+				45290B112D8DB6A200A0C084 /* StorageHelper.swift in Sources */,
 				452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */,
 				45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */,
 				45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */,

@@ -6,44 +6,50 @@
 //
 
 import Foundation
+import UIKit
 import SwiftUI
 import PhotosUI
+import VisionKit
 
 
 struct CameraView: UIViewControllerRepresentable {
-    @Binding var image: UIImage?
-    var onCapture: (UIImage) -> Void
-
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        let parent: CameraView
-
-        init(_ parent: CameraView) {
-            self.parent = parent
-        }
-
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            if let image = info[.originalImage] as? UIImage {
-                parent.image = image
-                parent.onCapture(image)
-            }
-            picker.dismiss(animated: true)
-        }
-
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            picker.dismiss(animated: true)
-        }
-    }
+    var completion: ([UIImage]) -> Void
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        return Coordinator(completion: completion)
     }
 
-    func makeUIViewController(context: Context) -> UIImagePickerController {
-        let picker = UIImagePickerController()
-        picker.delegate = context.coordinator
-        picker.sourceType = .camera
-        return picker
+    func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
+        let scanner = VNDocumentCameraViewController()
+        scanner.delegate = context.coordinator
+        return scanner
     }
 
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {}
+
+    class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
+        var completion: ([UIImage]) -> Void
+
+        init(completion: @escaping ([UIImage]) -> Void) {
+            self.completion = completion
+        }
+
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+            var images: [UIImage] = []
+            for i in 0..<scan.pageCount {
+                images.append(scan.imageOfPage(at: i))
+            }
+            completion(images)
+            controller.dismiss(animated: true)
+        }
+
+        func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+            controller.dismiss(animated: true)
+        }
+
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
+            print("Scanner failed: \(error.localizedDescription)")
+            controller.dismiss(animated: true)
+        }
+    }
 }

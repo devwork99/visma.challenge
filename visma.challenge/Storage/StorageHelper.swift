@@ -8,9 +8,9 @@
 import Foundation
 import CoreData
 
-class PhotoViewModel: ObservableObject {
+class StorageHelper: ObservableObject {
     
-    @Published var photos: [PhotoEntity] = []
+    @Published var scans: [PhotoEntity] = []
     
     private let container: NSPersistentContainer
 
@@ -24,11 +24,13 @@ class PhotoViewModel: ObservableObject {
         fetchPhotos()
     }
 
-    func savePhoto(fileName: String) {
+    func savePhoto(fileName: String, _ text:String) {
         let context = container.viewContext
         let newPhoto = PhotoEntity(context: context)
         newPhoto.id = UUID()
         newPhoto.fileName = fileName
+        newPhoto.text_ext = text
+        newPhoto.date = Date()
         
         do {
             try context.save()
@@ -41,7 +43,7 @@ class PhotoViewModel: ObservableObject {
     func fetchPhotos() {
         let request: NSFetchRequest<PhotoEntity> = PhotoEntity.fetchRequest()
         do {
-            photos = try container.viewContext.fetch(request)
+            scans = try container.viewContext.fetch(request)
         } catch {
             print("Failed to fetch photos: \(error)")
         }

@@ -11,10 +11,9 @@ struct RootView: View {
     
     @StateObject private var vm = RootViewModel()
     @StateObject var coordinator = AppCoordinator()
-    @StateObject private var photoViewModel = PhotoViewModel()
+    @StateObject private var photoViewModel = StorageHelper()
     
     var body: some View {
-        
         
         NavigationStack(path: $coordinator.navigationPath) {
             
@@ -45,18 +44,16 @@ struct RootView: View {
                 }
                 
                 List {
-                    ForEach(photoViewModel.photos, id: \.id) { photo in
+                    ForEach(photoViewModel.scans, id: \.id) { photo in
                         if let image = PhotoStorageManager.shared.loadImage(named: photo.fileName ?? "") {
                             
-                            ReceiptCell(imageIn:image, imageName:photo.fileName ,imageDate:"21-03-2025", totalAmount:23.5, currency:"Euro")
+                            ReceiptCell(imageIn:image, imageName:photo.fileName ,imageDate:photo.date?.description ?? "", totalAmount:23.5, currency:"Euro", textExt:photo.text_ext ?? " ")
                             
                         } else {
                             Text("Image not found")
                         }
                     }
                 }
-                
-                //Spacer()
             }
             
             .navigationDestination(for: String.self) { value in
