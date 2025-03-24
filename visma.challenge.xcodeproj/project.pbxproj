@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B082D8DA6B100A0C084 /* Coordinator.swift */; };
 		45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */; };
-		45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0C2D8DAD8500A0C084 /* AddExpense.swift */; };
+		45290B0D2D8DAD8500A0C084 /* ScansListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0C2D8DAD8500A0C084 /* ScansListView.swift */; };
 		45290B112D8DB6A200A0C084 /* StorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B102D8DB6A200A0C084 /* StorageHelper.swift */; };
 		45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45290B142D8DB79900A0C084 /* visma.xcdatamodeld */; };
 		45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */; };
@@ -23,9 +23,12 @@
 		452A4E1E2D8C4E36009BFEC9 /* visma_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E1D2D8C4E36009BFEC9 /* visma_challengeUITestsLaunchTests.swift */; };
 		452A4E2C2D8C529F009BFEC9 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */; };
 		45F858BB2D8F0050006A4047 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F858BA2D8F0050006A4047 /* VisionKit.framework */; };
-		45F858BD2D8F0415006A4047 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F858BC2D8F0415006A4047 /* ScanViewModel.swift */; };
+		45F858BD2D8F0415006A4047 /* ScanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F858BC2D8F0415006A4047 /* ScanListViewModel.swift */; };
 		45F858BF2D8F0469006A4047 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F858BE2D8F0469006A4047 /* Vision.framework */; };
 		45F858C32D8F1A26006A4047 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 45F858C22D8F1A26006A4047 /* README.md */; };
+		45F858C62D9061F3006A4047 /* ScanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F858C52D9061F3006A4047 /* ScanDetailView.swift */; };
+		45F858C82D9063B5006A4047 /* ScanDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F858C72D9063B5006A4047 /* ScanDetailViewModel.swift */; };
+		45F858CF2D90CBB0006A4047 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F858CE2D90CBAF006A4047 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,7 @@
 /* Begin PBXFileReference section */
 		45290B082D8DA6B100A0C084 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		45290B0C2D8DAD8500A0C084 /* AddExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpense.swift; sourceTree = "<group>"; };
+		45290B0C2D8DAD8500A0C084 /* ScansListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScansListView.swift; sourceTree = "<group>"; };
 		45290B102D8DB6A200A0C084 /* StorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHelper.swift; sourceTree = "<group>"; };
 		45290B152D8DB79900A0C084 /* visma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = visma.xcdatamodel; sourceTree = "<group>"; };
 		45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
@@ -65,10 +68,17 @@
 		452A4E1D2D8C4E36009BFEC9 /* visma_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		45F858BA2D8F0050006A4047 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
-		45F858BC2D8F0415006A4047 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
+		45F858BC2D8F0415006A4047 /* ScanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanListViewModel.swift; sourceTree = "<group>"; };
 		45F858BE2D8F0469006A4047 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 		45F858C12D8F19A4006A4047 /* demo_screens.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_screens.PNG; sourceTree = "<group>"; };
 		45F858C22D8F1A26006A4047 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		45F858C52D9061F3006A4047 /* ScanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDetailView.swift; sourceTree = "<group>"; };
+		45F858C72D9063B5006A4047 /* ScanDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDetailViewModel.swift; sourceTree = "<group>"; };
+		45F858CA2D90BA87006A4047 /* 2C3867FB-FF9F-4F3D-A72E-987E608726C1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2C3867FB-FF9F-4F3D-A72E-987E608726C1.jpg"; sourceTree = "<group>"; };
+		45F858CB2D90BA87006A4047 /* 8093B20B-0C06-4020-B2D1-10C810424698.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8093B20B-0C06-4020-B2D1-10C810424698.jpg"; sourceTree = "<group>"; };
+		45F858CC2D90BA87006A4047 /* 533258FA-2F40-49A1-8E42-A8913912DE75.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "533258FA-2F40-49A1-8E42-A8913912DE75.jpg"; sourceTree = "<group>"; };
+		45F858CD2D90BA87006A4047 /* AB987D50-726F-4C0B-9A08-7CBD3BB4ABE9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AB987D50-726F-4C0B-9A08-7CBD3BB4ABE9.jpg"; sourceTree = "<group>"; };
+		45F858CE2D90CBAF006A4047 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +117,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		45290B0E2D8DAD8B00A0C084 /* DetailsToAddExpense */ = {
+		45290B0E2D8DAD8B00A0C084 /* ScannerList */ = {
 			isa = PBXGroup;
 			children = (
-				45290B0C2D8DAD8500A0C084 /* AddExpense.swift */,
-				45F858BC2D8F0415006A4047 /* ScanViewModel.swift */,
+				45F858C42D9061AD006A4047 /* ScanDetailView */,
+				45290B0C2D8DAD8500A0C084 /* ScansListView.swift */,
+				45F858BC2D8F0415006A4047 /* ScanListViewModel.swift */,
 				45290B192D8DBB1800A0C084 /* CameraView.swift */,
 			);
-			path = DetailsToAddExpense;
+			path = ScannerList;
 			sourceTree = "<group>";
 		};
 		45290B0F2D8DB68900A0C084 /* Storage */ = {
@@ -123,6 +134,7 @@
 				45290B102D8DB6A200A0C084 /* StorageHelper.swift */,
 				45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */,
 				45290B142D8DB79900A0C084 /* visma.xcdatamodeld */,
+				45F858CE2D90CBAF006A4047 /* Helper.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -193,7 +205,7 @@
 			children = (
 				452A4E022D8C4E34009BFEC9 /* RootView.swift */,
 				452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */,
-				45290B0E2D8DAD8B00A0C084 /* DetailsToAddExpense */,
+				45290B0E2D8DAD8B00A0C084 /* ScannerList */,
 			);
 			path = MVVM_Schemes;
 			sourceTree = "<group>";
@@ -211,8 +223,29 @@
 			isa = PBXGroup;
 			children = (
 				45F858C12D8F19A4006A4047 /* demo_screens.PNG */,
+				45F858C92D90BA75006A4047 /* Demo */,
 			);
 			path = ScreenShots;
+			sourceTree = "<group>";
+		};
+		45F858C42D9061AD006A4047 /* ScanDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				45F858C52D9061F3006A4047 /* ScanDetailView.swift */,
+				45F858C72D9063B5006A4047 /* ScanDetailViewModel.swift */,
+			);
+			path = ScanDetailView;
+			sourceTree = "<group>";
+		};
+		45F858C92D90BA75006A4047 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				45F858CA2D90BA87006A4047 /* 2C3867FB-FF9F-4F3D-A72E-987E608726C1.jpg */,
+				45F858CB2D90BA87006A4047 /* 8093B20B-0C06-4020-B2D1-10C810424698.jpg */,
+				45F858CC2D90BA87006A4047 /* 533258FA-2F40-49A1-8E42-A8913912DE75.jpg */,
+				45F858CD2D90BA87006A4047 /* AB987D50-726F-4C0B-9A08-7CBD3BB4ABE9.jpg */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,14 +379,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45290B0D2D8DAD8500A0C084 /* AddExpense.swift in Sources */,
+				45290B0D2D8DAD8500A0C084 /* ScansListView.swift in Sources */,
+				45F858CF2D90CBB0006A4047 /* Helper.swift in Sources */,
 				45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */,
+				45F858C62D9061F3006A4047 /* ScanDetailView.swift in Sources */,
 				45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */,
-				45F858BD2D8F0415006A4047 /* ScanViewModel.swift in Sources */,
+				45F858BD2D8F0415006A4047 /* ScanListViewModel.swift in Sources */,
 				45290B112D8DB6A200A0C084 /* StorageHelper.swift in Sources */,
 				452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */,
 				45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */,
 				45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */,
+				45F858C82D9063B5006A4047 /* ScanDetailViewModel.swift in Sources */,
 				45290B1A2D8DBB1800A0C084 /* CameraView.swift in Sources */,
 				452A4E2C2D8C529F009BFEC9 /* RootViewModel.swift in Sources */,
 				452A4E012D8C4E34009BFEC9 /* visma_challengeApp.swift in Sources */,

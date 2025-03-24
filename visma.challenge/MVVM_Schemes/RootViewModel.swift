@@ -10,20 +10,9 @@ import Foundation
 
 class RootViewModel : ObservableObject {
     
+    //@Published var items : [String] = []
     
+    init() { }
     
-    @Published var items : [String] = []
-    
-    //var coordinator : AppCon
-    
-
-    init() {
-        items = ["One","Two","Three","Four", "Five", "Six","One","Two","Three","Four", "Five", "Six"]
-    }
-    
-    
-    func showReceitDetails(){
-        
-    }
-    
+    func showReceitDetails(){ }
 }

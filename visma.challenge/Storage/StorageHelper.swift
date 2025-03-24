@@ -30,7 +30,12 @@ class StorageHelper: ObservableObject {
         newPhoto.id = UUID()
         newPhoto.fileName = fileName
         newPhoto.text_ext = text
-        newPhoto.date = Date()
+        
+        let topics = Helper.extractReceiptDetails(from:text)
+        
+        newPhoto.date = topics.date ?? ""
+        newPhoto.total_amount = topics.total ?? ""
+        newPhoto.currency = topics.currency
         
         do {
             try context.save()
@@ -44,6 +49,11 @@ class StorageHelper: ObservableObject {
         let request: NSFetchRequest<PhotoEntity> = PhotoEntity.fetchRequest()
         do {
             scans = try container.viewContext.fetch(request)
+            
+            if let first = scans.first {
+                print("fileName == \(String(describing: first.fileName))")
+                //print("extracted_text == \(String(describing:first.text_ext))")
+            }
         } catch {
             print("Failed to fetch photos: \(error)")
         }

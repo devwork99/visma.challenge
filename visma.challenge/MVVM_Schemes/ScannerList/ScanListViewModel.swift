@@ -13,12 +13,15 @@ import Vision
 import VisionKit
 import CoreData
 
-class ScanViewModel: ObservableObject {
+class ScanListViewModel: ObservableObject {
     
-    @Published var scannedText: String = ""
+    @StateObject var storageHelper = StorageHelper()
     
-    @StateObject private var photoViewModel = StorageHelper()
-
+    
+    init(){
+        
+    }
+    
     
     func processScan(_ images: [UIImage]) {
         guard let image = images.first else { return }
@@ -33,10 +36,13 @@ class ScanViewModel: ObservableObject {
                 .compactMap { $0.topCandidates(1).first?.string }
                 .joined(separator: "\n")
             
-            DispatchQueue.main.async {
-                self.scannedText = extractedText
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                //self.scannedText = extractedText
                 if let fileName = PhotoStorageManager.shared.saveImage(image) {
-                    self.photoViewModel.savePhoto(fileName:fileName, extractedText)
+                    self.storageHelper.savePhoto(fileName:fileName, extractedText)
+                    //print("extractedText == \(fileName)")
+                    //print("extractedText == \(extractedText)")
                 }
             }
         }

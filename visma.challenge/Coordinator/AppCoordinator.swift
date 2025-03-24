@@ -6,28 +6,35 @@
 //
 
 import Foundation
+import SwiftUI
 
 
-
-class AppCoordinator: Coordinator {
+class AppCoordinator:  ObservableObject {
     
-    @Published var navigationPath: [String] = []
-
-    func start() {
-     
+    @Published var navigationPath = NavigationPath()
+        
+    func start() { }
+    
+    func goToScanFeature(){
+        navigationPath.append(Screens.scanFeatureView)
     }
     
     func goToDetail() {
-        
-        navigationPath.append(NavigationKeywords.detailView.rawValue)
+        navigationPath.append(Screens.scanDetailView)
     }
     
     func goBack() {
         navigationPath.removeLast()
     }
+    
+    func goHome(){
+        navigationPath = NavigationPath()
+    }
 }
 
 
-enum NavigationKeywords : String {
-    case detailView = "DetailView"
+enum Screens : Hashable {
+    case scanFeatureView
+    case scanDetailView
+    case goHome
 }

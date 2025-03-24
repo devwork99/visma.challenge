@@ -10,8 +10,9 @@ import SwiftUI
 struct RootView: View {
     
     @StateObject private var vm = RootViewModel()
-    @StateObject var coordinator = AppCoordinator()
+    @StateObject private var coordinator = AppCoordinator()
     @StateObject private var photoViewModel = StorageHelper()
+    
     
     var body: some View {
         
@@ -20,12 +21,12 @@ struct RootView: View {
             VStack {
                 
                 HStack(alignment:.center, spacing:10){
-
+                    
                     Button {
-                        coordinator.goToDetail()
-
+                        coordinator.goToScanFeature()
+                        
                     } label: {
-                        Text("Add Expense")
+                        Text("Scans Feature")
                             .foregroundColor(.gray)
                             .font(Font(UIFont.boldSystemFont(ofSize: 20)))
                             .frame(height:100)
@@ -40,33 +41,24 @@ struct RootView: View {
                         .onTapGesture {
                             coordinator.goToDetail()
                         }
-                    
-                }
-                
-                List {
-                    ForEach(photoViewModel.scans, id: \.id) { photo in
-                        if let image = PhotoStorageManager.shared.loadImage(named: photo.fileName ?? "") {
-                            
-                            ReceiptCell(imageIn:image, imageName:photo.fileName ,imageDate:photo.date?.description ?? "", totalAmount:23.5, currency:"Euro", textExt:photo.text_ext ?? " ")
-                            
-                        } else {
-                            Text("Image not found")
-                        }
-                    }
                 }
             }
-            
-            .navigationDestination(for: String.self) { value in
-                
-                if value == NavigationKeywords.detailView.rawValue {
-                    AddExpense(coordinator: coordinator)
+
+            .navigationDestination(for: Screens.self) { value in
+                switch value {
+                case .scanFeatureView:
+                    ScansListView()
+                case .scanDetailView:
+                    ScanDetailView()
+                case .goHome:
+                    RootView()
                 }
-                
             }
+
         }
         
-
-        .padding()
+        .environmentObject(coordinator)
+        
     }
 }
 
