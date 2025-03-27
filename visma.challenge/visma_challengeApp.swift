@@ -11,7 +11,8 @@ import SwiftUI
 struct visma_challengeApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            //RootView()
+            ContentView()
         }
     }
 }

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B082D8DA6B100A0C084 /* Coordinator.swift */; };
+		4512D4EF2D94B17E00F899D5 /* ProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4512D4EE2D94B17E00F899D5 /* ProductUseCase.swift */; };
 		45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */; };
 		45290B0D2D8DAD8500A0C084 /* ScansListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B0C2D8DAD8500A0C084 /* ScansListView.swift */; };
-		45290B112D8DB6A200A0C084 /* StorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B102D8DB6A200A0C084 /* StorageHelper.swift */; };
+		45290B112D8DB6A200A0C084 /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B102D8DB6A200A0C084 /* ProductsRepository.swift */; };
 		45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45290B142D8DB79900A0C084 /* visma.xcdatamodeld */; };
-		45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */; };
+		45290B182D8DB9C200A0C084 /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B172D8DB9C200A0C084 /* FileStorageManager.swift */; };
 		45290B1A2D8DBB1800A0C084 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45290B192D8DBB1800A0C084 /* CameraView.swift */; };
 		452A4E012D8C4E34009BFEC9 /* visma_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */; };
 		452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A4E022D8C4E34009BFEC9 /* RootView.swift */; };
@@ -49,12 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		45290B082D8DA6B100A0C084 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4512D4EE2D94B17E00F899D5 /* ProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUseCase.swift; sourceTree = "<group>"; };
+		4512D5012D94E6B700F899D5 /* demo_video720.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = demo_video720.mov; sourceTree = "<group>"; };
 		45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		45290B0C2D8DAD8500A0C084 /* ScansListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScansListView.swift; sourceTree = "<group>"; };
-		45290B102D8DB6A200A0C084 /* StorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHelper.swift; sourceTree = "<group>"; };
+		45290B102D8DB6A200A0C084 /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
 		45290B152D8DB79900A0C084 /* visma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = visma.xcdatamodel; sourceTree = "<group>"; };
-		45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageManager.swift; sourceTree = "<group>"; };
+		45290B172D8DB9C200A0C084 /* FileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
 		45290B192D8DBB1800A0C084 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		452A4DFD2D8C4E34009BFEC9 /* visma.challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = visma.challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeApp.swift; sourceTree = "<group>"; };
@@ -67,6 +68,11 @@
 		452A4E1B2D8C4E36009BFEC9 /* visma_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeUITests.swift; sourceTree = "<group>"; };
 		452A4E1D2D8C4E36009BFEC9 /* visma_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visma_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		453228FD2D956A76000EA504 /* IMG_1184.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_1184.HEIC; sourceTree = "<group>"; };
+		453228FE2D956A76000EA504 /* IMG_1185.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_1185.HEIC; sourceTree = "<group>"; };
+		453228FF2D956A76000EA504 /* IMG_1186.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_1186.HEIC; sourceTree = "<group>"; };
+		453229002D956A76000EA504 /* IMG_1187.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_1187.HEIC; sourceTree = "<group>"; };
+		453229012D956A76000EA504 /* IMG_1188.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_1188.HEIC; sourceTree = "<group>"; };
 		45F858BA2D8F0050006A4047 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
 		45F858BC2D8F0415006A4047 /* ScanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanListViewModel.swift; sourceTree = "<group>"; };
 		45F858BE2D8F0469006A4047 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
@@ -74,10 +80,6 @@
 		45F858C22D8F1A26006A4047 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45F858C52D9061F3006A4047 /* ScanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDetailView.swift; sourceTree = "<group>"; };
 		45F858C72D9063B5006A4047 /* ScanDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDetailViewModel.swift; sourceTree = "<group>"; };
-		45F858CA2D90BA87006A4047 /* 2C3867FB-FF9F-4F3D-A72E-987E608726C1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2C3867FB-FF9F-4F3D-A72E-987E608726C1.jpg"; sourceTree = "<group>"; };
-		45F858CB2D90BA87006A4047 /* 8093B20B-0C06-4020-B2D1-10C810424698.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8093B20B-0C06-4020-B2D1-10C810424698.jpg"; sourceTree = "<group>"; };
-		45F858CC2D90BA87006A4047 /* 533258FA-2F40-49A1-8E42-A8913912DE75.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "533258FA-2F40-49A1-8E42-A8913912DE75.jpg"; sourceTree = "<group>"; };
-		45F858CD2D90BA87006A4047 /* AB987D50-726F-4C0B-9A08-7CBD3BB4ABE9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AB987D50-726F-4C0B-9A08-7CBD3BB4ABE9.jpg"; sourceTree = "<group>"; };
 		45F858CE2D90CBAF006A4047 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,10 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4512D4ED2D94B0CB00F899D5 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4512D4EE2D94B17E00F899D5 /* ProductUseCase.swift */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		4512D4F02D94B5B000F899D5 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				45290B102D8DB6A200A0C084 /* ProductsRepository.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
 		45290B072D8DA65200A0C084 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				45290B082D8DA6B100A0C084 /* Coordinator.swift */,
 				45290B0A2D8DABA900A0C084 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -131,10 +148,9 @@
 		45290B0F2D8DB68900A0C084 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				45290B102D8DB6A200A0C084 /* StorageHelper.swift */,
-				45290B172D8DB9C200A0C084 /* PhotoStorageManager.swift */,
-				45290B142D8DB79900A0C084 /* visma.xcdatamodeld */,
+				45290B172D8DB9C200A0C084 /* FileStorageManager.swift */,
 				45F858CE2D90CBAF006A4047 /* Helper.swift */,
+				45290B142D8DB79900A0C084 /* visma.xcdatamodeld */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -164,11 +180,13 @@
 		452A4DFF2D8C4E34009BFEC9 /* visma.challenge */ = {
 			isa = PBXGroup;
 			children = (
-				45F858C02D8F1991006A4047 /* ScreenShots */,
+				45F858C02D8F1991006A4047 /* Demo */,
 				452A4E002D8C4E34009BFEC9 /* visma_challengeApp.swift */,
 				45290B0F2D8DB68900A0C084 /* Storage */,
 				45290B072D8DA65200A0C084 /* Coordinator */,
-				452A4E2A2D8C4E54009BFEC9 /* MVVM_Schemes */,
+				452A4E2A2D8C4E54009BFEC9 /* PresentationLayer */,
+				4512D4F02D94B5B000F899D5 /* DataLayer */,
+				4512D4ED2D94B0CB00F899D5 /* DomainLayer */,
 				452A4E042D8C4E36009BFEC9 /* Assets.xcassets */,
 				452A4E062D8C4E36009BFEC9 /* Preview Content */,
 			);
@@ -200,14 +218,14 @@
 			path = visma.challengeUITests;
 			sourceTree = "<group>";
 		};
-		452A4E2A2D8C4E54009BFEC9 /* MVVM_Schemes */ = {
+		452A4E2A2D8C4E54009BFEC9 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
 				452A4E022D8C4E34009BFEC9 /* RootView.swift */,
 				452A4E2B2D8C529F009BFEC9 /* RootViewModel.swift */,
 				45290B0E2D8DAD8B00A0C084 /* ScannerList */,
 			);
-			path = MVVM_Schemes;
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
 		45F858B92D8F004F006A4047 /* Frameworks */ = {
@@ -219,13 +237,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		45F858C02D8F1991006A4047 /* ScreenShots */ = {
+		45F858C02D8F1991006A4047 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4512D5012D94E6B700F899D5 /* demo_video720.mov */,
 				45F858C12D8F19A4006A4047 /* demo_screens.PNG */,
-				45F858C92D90BA75006A4047 /* Demo */,
+				45F858C92D90BA75006A4047 /* Input */,
 			);
-			path = ScreenShots;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		45F858C42D9061AD006A4047 /* ScanDetailView */ = {
@@ -237,15 +256,16 @@
 			path = ScanDetailView;
 			sourceTree = "<group>";
 		};
-		45F858C92D90BA75006A4047 /* Demo */ = {
+		45F858C92D90BA75006A4047 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				45F858CA2D90BA87006A4047 /* 2C3867FB-FF9F-4F3D-A72E-987E608726C1.jpg */,
-				45F858CB2D90BA87006A4047 /* 8093B20B-0C06-4020-B2D1-10C810424698.jpg */,
-				45F858CC2D90BA87006A4047 /* 533258FA-2F40-49A1-8E42-A8913912DE75.jpg */,
-				45F858CD2D90BA87006A4047 /* AB987D50-726F-4C0B-9A08-7CBD3BB4ABE9.jpg */,
+				453228FD2D956A76000EA504 /* IMG_1184.HEIC */,
+				453228FE2D956A76000EA504 /* IMG_1185.HEIC */,
+				453228FF2D956A76000EA504 /* IMG_1186.HEIC */,
+				453229002D956A76000EA504 /* IMG_1187.HEIC */,
+				453229012D956A76000EA504 /* IMG_1188.HEIC */,
 			);
-			path = Demo;
+			path = Input;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,14 +401,14 @@
 			files = (
 				45290B0D2D8DAD8500A0C084 /* ScansListView.swift in Sources */,
 				45F858CF2D90CBB0006A4047 /* Helper.swift in Sources */,
-				45290B092D8DA6B100A0C084 /* Coordinator.swift in Sources */,
+				4512D4EF2D94B17E00F899D5 /* ProductUseCase.swift in Sources */,
 				45F858C62D9061F3006A4047 /* ScanDetailView.swift in Sources */,
 				45290B162D8DB79900A0C084 /* visma.xcdatamodeld in Sources */,
 				45F858BD2D8F0415006A4047 /* ScanListViewModel.swift in Sources */,
-				45290B112D8DB6A200A0C084 /* StorageHelper.swift in Sources */,
+				45290B112D8DB6A200A0C084 /* ProductsRepository.swift in Sources */,
 				452A4E032D8C4E34009BFEC9 /* RootView.swift in Sources */,
 				45290B0B2D8DABA900A0C084 /* AppCoordinator.swift in Sources */,
-				45290B182D8DB9C200A0C084 /* PhotoStorageManager.swift in Sources */,
+				45290B182D8DB9C200A0C084 /* FileStorageManager.swift in Sources */,
 				45F858C82D9063B5006A4047 /* ScanDetailViewModel.swift in Sources */,
 				45290B1A2D8DBB1800A0C084 /* CameraView.swift in Sources */,
 				452A4E2C2D8C529F009BFEC9 /* RootViewModel.swift in Sources */,
