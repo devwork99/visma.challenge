@@ -20,13 +20,14 @@ class ProductsRepositoryService: ProductsRepositoryProtocol {
     private let container: NSPersistentContainer
 
     init() {
-        container = NSPersistentContainer(name: "visma")
+        container = NSPersistentContainer(name: AppConstants.coreDataModelName)
         container.loadPersistentStores { _, error in
             if let error = error {
                 print("Core Data failed to load: \(error)")
             }
         }
     }
+
 
     func saveProduct(fileName: String, _ text:String) {
         let context = container.viewContext
